@@ -52,14 +52,14 @@ public class EmployeePayrollController {
     /**
      * Updating employee data using path variable and request body by put method
      */
-    @PutMapping("/update")
-    public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@RequestBody EmployeePayrollDTO empPayrollDTO){
-        EmployeePayrollData empData = null;
-        empData = employeePayrollService.updateEmployeePayrollData(empPayrollDTO);
-        ResponseDTO respDTO = new ResponseDTO("Updated Employee Payroll Data Successfully!", empData);
-        return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
-    }
+    @PutMapping(path = "/update/{empId}")
+    public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@PathVariable("empId") int empId,
+                                                                 @RequestBody EmployeePayrollDTO empPayrollDTO){
 
+        EmployeePayrollData employeePayrollData = employeePayrollService.updateEmployeePayrollData(empId, empPayrollDTO);
+        ResponseDTO respDTO = new ResponseDTO("Updated Employee payroll Data for: ", empPayrollDTO);
+        return new ResponseEntity<ResponseDTO> (respDTO, HttpStatus.OK);
+    }
     /**
      * Deleting employee data using path variable by delete method
      */
