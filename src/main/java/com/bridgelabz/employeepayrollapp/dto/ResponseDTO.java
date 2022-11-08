@@ -1,4 +1,5 @@
 package com.bridgelabz.employeepayrollapp.dto;
+
 import lombok.Data;
 /*
  *@Data is equivalent to using @getters @setters @RequiredArgsConstructor @ToString
