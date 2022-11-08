@@ -1,0 +1,6 @@
+2022-11-08 12:26:39.531  INFO 7004 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : Starting EmployeePayrollAppApplication using Java 18.0.2.1 on DESKTOP-4DL0KT5 with PID 7004 (C:\Users\manea\IdeaProjects\EmployeePayrollApp\target\classes started by Phoenix in C:\Users\manea\IdeaProjects\EmployeePayrollApp)
+2022-11-08 12:26:39.581 DEBUG 7004 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-11-08 12:26:39.582  INFO 7004 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-11-08 12:26:43.962  WARN 7004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-08 12:26:44.593  INFO 7004 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : Started EmployeePayrollAppApplication in 5.718 seconds (JVM running for 7.116)
+2022-11-08 12:26:44.599  INFO 7004 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : Employee Payroll App Started
