@@ -35,6 +35,13 @@ public class EmployeePayrollService implements IEmployeePayrollService{
         return employeePayrollRepository.findById(empId)
                 .orElseThrow(() -> new EmployeePayrollException("Employee With employee id "+empId+" does not exists..!"));
     }
+     /**
+     *Method for get an employee record by department
+      */
+    @Override
+    public List<EmployeePayrollData> getEmployeePayrollDataByDepartment(String department) {
+        return employeePayrollRepository.findEmployeesByDepartment(department);
+    }
 
     /**
      * Method to Create an Employee Payroll data

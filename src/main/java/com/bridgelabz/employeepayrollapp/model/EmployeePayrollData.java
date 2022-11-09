@@ -28,7 +28,7 @@ public @Data class EmployeePayrollData {
     @ElementCollection
     @CollectionTable(name = "employee_department",joinColumns = @JoinColumn(name = "id"))
     @Column(name = "department")
-    private List<String> departments;
+    private List<String> department;
 
     public  EmployeePayrollData(){ }
     public EmployeePayrollData( EmployeePayrollDTO employeePayrollDTO)
@@ -42,6 +42,6 @@ public @Data class EmployeePayrollData {
         this.note = employeePayrollDTO.note;
         this.startDate = employeePayrollDTO.startDate;
         this.profilePic = employeePayrollDTO.profilePic;
-        this.departments = employeePayrollDTO.departments;
+        this.department = employeePayrollDTO.department;
     }
 }

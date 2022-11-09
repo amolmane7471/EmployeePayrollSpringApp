@@ -28,7 +28,7 @@ public @ToString class EmployeePayrollDTO {
     public String profilePic;
 
     @NotNull(message = "Department should not be Empty")
-    public List<String> departments;
+    public List<String> department;
 
 
 }
