@@ -31,9 +31,8 @@ public @Data class EmployeePayrollData {
     private List<String> departments;
 
     public  EmployeePayrollData(){ }
-    public EmployeePayrollData(int employeeId, EmployeePayrollDTO employeePayrollDTO)
+    public EmployeePayrollData( EmployeePayrollDTO employeePayrollDTO)
     {
-        this.employeeId = employeeId;
         this.updateEmployeePayrollData(employeePayrollDTO);
     }
     public void updateEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO){
