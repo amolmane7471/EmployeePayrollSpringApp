@@ -41,6 +41,17 @@ public class EmployeePayrollController {
     }
 
     /**
+     * Getting Department wise employee list using department
+     */
+    @GetMapping("/department/{department}")
+    public ResponseEntity<ResponseDTO> getDepartmentById(@PathVariable("department") String department){
+        List<EmployeePayrollData> empDataList = null;
+        empDataList =employeePayrollService.getEmployeePayrollDataByDepartment(department);
+        ResponseDTO respDTO = new ResponseDTO("Get call success", empDataList);
+        return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
+    }
+
+    /**
      * Creating employee data using Body by Post mapping
      */
     @PostMapping("/create")
