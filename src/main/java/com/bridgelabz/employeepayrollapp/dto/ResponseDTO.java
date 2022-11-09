@@ -4,7 +4,8 @@ import lombok.Data;
 /*
  *@Data is equivalent to using @getters @setters @RequiredArgsConstructor @ToString
  */
-public @Data class ResponseDTO {
+@Data
+public  class ResponseDTO {
     private String message;
     private Object data;
 

@@ -1,10 +1,9 @@
 package com.bridgelabz.employeepayrollapp.dto;
-
+import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.ToString;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
 import java.util.List;
 
 public @ToString class EmployeePayrollDTO {
@@ -13,26 +12,22 @@ public @ToString class EmployeePayrollDTO {
     public String name;
     @Min(value = 500, message = "Salary should be more than 500")
     public long salary;
-
+    @Pattern(regexp = "male|female",message = "Gender Needs to be Male or Female")
     public String gender;
 
-    public String startDate;
+    @JsonFormat(pattern = "dd MM yyyy")
+    @NotNull(message = "Start Date Should not be Empty")
+    @PastOrPresent(message = "Start Date Should be past or present Date")
+    public LocalDate startDate;
 
+    @NotBlank(message = "Note cannot be empty")
     public String note;
 
+    @NotBlank(message = "Profile Pic should not be Empty")
     public String profilePic;
 
-    public List<String> department;
-    public EmployeePayrollDTO(String name,long salary){
-        this.name = name;
-        this.salary = salary;
-    }
+    @NotNull(message = "Department should not be Empty")
+    public List<String> departments;
 
-    @Override
-    public String toString() {
-        return "EmployeePayrollDTO{" +
-                "name='" + name + '\'' +
-                ", salary=" + salary +
-                '}';
-    }
+
 }
